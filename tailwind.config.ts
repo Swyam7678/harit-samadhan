@@ -57,7 +57,24 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Agricultural theme colors
+        agricultural: {
+          green: "hsl(var(--agricultural-green))",
+          brown: "hsl(var(--earth-brown))",
+          fresh: "hsl(var(--fresh-green))",
+          gold: "hsl(var(--harvest-gold))",
+          dark: "hsl(var(--soil-dark))",
+        },
       },
+      backgroundImage: {
+        'gradient-agricultural': 'var(--gradient-agricultural)',
+        'gradient-earth': 'var(--gradient-earth)',
+        'gradient-fresh': 'var(--gradient-fresh)',
+      },
+      boxShadow: {
+        'agricultural': 'var(--shadow-agricultural)',
+        'elevated': 'var(--shadow-elevated)',
+       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
