@@ -5,6 +5,7 @@ import NPKSensor from "@/components/dashboard/NPKSensor";
 import WasteMarketplace from "@/components/dashboard/WasteMarketplace";
 import Advisories from "@/components/dashboard/Advisories";
 import QuickActions from "@/components/dashboard/QuickActions";
+import ChatBot from "@/components/ChatBot";
 import farmingHero from "@/assets/farming-hero.jpg";
 
 const Index = () => {
@@ -97,6 +98,9 @@ const Index = () => {
           </div>
         </section>
       </main>
+      
+      {/* ChatBot */}
+      <ChatBot />
     </div>
   );
 };
