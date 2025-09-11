@@ -1,9 +1,9 @@
 import Header from "@/components/Header";
-import MandiPrices from "@/components/dashboard/MandiPrices";
-import WeatherWidget from "@/components/dashboard/WeatherWidget";
-import NPKSensor from "@/components/dashboard/NPKSensor";
-import WasteMarketplace from "@/components/dashboard/WasteMarketplace";
-import Advisories from "@/components/dashboard/Advisories";
+import EnhancedMandiPrices from "@/components/dashboard/EnhancedMandiPrices";
+import EnhancedWeatherWidget from "@/components/dashboard/EnhancedWeatherWidget";
+import IoTSensorDashboard from "@/components/dashboard/IoTSensorDashboard";
+import EnhancedWasteMarketplace from "@/components/dashboard/EnhancedWasteMarketplace";
+import GovernmentAlerts from "@/components/dashboard/GovernmentAlerts";
 import QuickActions from "@/components/dashboard/QuickActions";
 import ChatBot from "@/components/ChatBot";
 import farmingHero from "@/assets/farming-hero.jpg";
@@ -45,33 +45,33 @@ const Index = () => {
       {/* Main Dashboard */}
       <main className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-          {/* Weather Widget - Full width on mobile, spans 1 column on larger screens */}
-          <div className="md:col-span-1">
-            <WeatherWidget />
+          {/* Enhanced Weather Widget */}
+          <div className="xl:col-span-1">
+            <EnhancedWeatherWidget />
           </div>
           
-          {/* Mandi Prices */}
-          <div className="md:col-span-1">
-            <MandiPrices />
+          {/* Enhanced Mandi Prices */}
+          <div className="xl:col-span-1">
+            <EnhancedMandiPrices />
           </div>
           
-          {/* NPK Sensor */}
-          <div className="md:col-span-2 xl:col-span-1">
-            <NPKSensor />
+          {/* IoT Sensor Dashboard */}
+          <div className="xl:col-span-1">
+            <IoTSensorDashboard />
           </div>
           
-          {/* Waste Marketplace */}
-          <div className="md:col-span-1">
-            <WasteMarketplace />
+          {/* Enhanced Waste Marketplace */}
+          <div className="xl:col-span-1">
+            <EnhancedWasteMarketplace />
           </div>
           
-          {/* Government Advisories */}
-          <div className="md:col-span-1">
-            <Advisories />
+          {/* Government Alerts */}
+          <div className="xl:col-span-1">
+            <GovernmentAlerts />
           </div>
           
-          {/* Quick Actions - Full width */}
-          <div className="md:col-span-2 xl:col-span-1">
+          {/* Quick Actions */}
+          <div className="xl:col-span-1">
             <QuickActions />
           </div>
         </div>

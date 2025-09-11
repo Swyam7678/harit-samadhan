@@ -3,6 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const Header = () => {
+  const { user, logout } = useAuth();
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+
   return (
     <header className="bg-card border-b border-border shadow-sm">
       <div className="container mx-auto px-4 py-4">
@@ -42,6 +45,12 @@ const Header = () => {
           </div>
         </div>
       </div>
+      
+      <LoginModal 
+        isOpen={isLoginOpen}
+        onClose={() => setIsLoginOpen(false)}
+        onLogin={() => {}}
+      />
     </header>
   );
 };
