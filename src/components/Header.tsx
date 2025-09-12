@@ -1,6 +1,9 @@
+import { useState } from "react";
 import { Bell, User, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { useAuth } from "@/contexts/AuthContext";
+import LoginModal from "@/components/auth/LoginModal";
 
 const Header = () => {
   const { user, logout } = useAuth();
