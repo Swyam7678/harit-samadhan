@@ -6,8 +6,19 @@ import { useAuth } from "@/contexts/AuthContext";
 import LoginModal from "@/components/auth/LoginModal";
 
 const Header = () => {
-  const { user, logout } = useAuth();
+  const { user, login } = useAuth();
   const [isLoginOpen, setIsLoginOpen] = useState(false);
+
+  const handleLogin = (userProfile: any) => {
+    login(userProfile);
+    setIsLoginOpen(false);
+  };
+
+  const handleProfileClick = () => {
+    if (!user) {
+      setIsLoginOpen(true);
+    }
+  };
 
   return (
     <header className="bg-card border-b border-border shadow-sm">
@@ -33,16 +44,18 @@ const Header = () => {
               </span>
             </Button>
             
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2 cursor-pointer" onClick={handleProfileClick}>
               <Avatar className="h-8 w-8">
                 <AvatarImage src="/api/placeholder/32/32" alt="Farmer" />
                 <AvatarFallback className="bg-primary text-primary-foreground">
-                  राम
+                  {user ? user.name?.slice(0, 2) : <User className="h-4 w-4" />}
                 </AvatarFallback>
               </Avatar>
               <div className="hidden md:block">
-                <p className="text-sm font-medium">राम कुमार</p>
-                <p className="text-xs text-muted-foreground">Village Kharkhoda</p>
+                <p className="text-sm font-medium">{user ? user.name : "Guest User"}</p>
+                <p className="text-xs text-muted-foreground">
+                  {user ? user.village : "Click to login"}
+                </p>
               </div>
             </div>
           </div>
@@ -52,7 +65,7 @@ const Header = () => {
       <LoginModal 
         isOpen={isLoginOpen}
         onClose={() => setIsLoginOpen(false)}
-        onLogin={() => {}}
+        onLogin={handleLogin}
       />
     </header>
   );
