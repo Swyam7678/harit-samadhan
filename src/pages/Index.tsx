@@ -13,38 +13,9 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section */}
-      <section className="relative h-64 md:h-80 overflow-hidden">
-        <img 
-          src={farmingHero} 
-          alt="Modern Farming with Digital Technology"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/20 flex items-center">
-          <div className="container mx-auto px-4">
-            <div className="max-w-2xl text-white">
-              <h1 className="text-3xl md:text-5xl font-bold mb-4">
-                स्मार्ट खेती का भविष्य
-              </h1>
-              <p className="text-lg md:text-xl opacity-90 mb-6">
-                Real-time market prices, weather updates, soil health monitoring, and government schemes - all in one platform
-              </p>
-              <div className="flex gap-3">
-                <button className="bg-gradient-agricultural px-6 py-3 rounded-lg font-semibold text-white hover:shadow-elevated transition-all">
-                  Get Started
-                </button>
-                <button className="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-lg font-semibold text-white border border-white/30 hover:bg-white/30 transition-all">
-                  Learn More
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Main Dashboard - 5 Feature Cards */}
+      {/* Top Feature Cards */}
       <main className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-8">
           {/* Weather Card */}
           <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 rounded-xl p-6 border border-blue-200 dark:border-blue-700 hover:shadow-lg transition-all cursor-pointer">
             <div className="text-center">
